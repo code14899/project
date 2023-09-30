@@ -5,8 +5,10 @@ import Judge from "../components/Judge";
 export default function JudgePage() {
   return (
     <>
-    <ConnectWallet />
+    <div className="w-full">
+    
       <Judge/>
+      </div>
     </>
   );
 }

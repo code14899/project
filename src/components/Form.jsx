@@ -21,24 +21,23 @@ const address = "0x3d64226A740EC43B25a53596DA02208fc4214a7c";
         const [uri, setUri] = useState("");
 
     return (
-        <div className="flex items-center justify-center bg-blue-500">
+      <div className="flex items-center justify-center w-auto mt-6">
+        <div className="items-center justify-center ">
       <Card color="transparent" shadow={false}>
-        <Typography variant="h4" color="blue-gray">
+        <div className="text-3xl tracking-tighter text-center font-bold">
           Add case data
-        </Typography>
+        </div>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 text-black" >
           <div className="mb-4 flex flex-col gap-6">
-            <Input size="lg" label="Case No." value={caseNo} onChange={(event) => { setCaseNo(event.target.value) }}/>
-            <Input size="lg" label="Case Name" value={caseName} onChange={(event) => { setCaseName(event.target.value) }}/>
-            <Input size="lg" label="Judge" value={judge} onChange={(event) => { setJudge(event.target.value) }}/>
-            <Input size="lg" label="Prosecutor lawyer name" value={lawyer1} onChange={(event) => { setLawyer1(event.target.value) }}/>
-            <Input size="lg" label="Defender lawyer name" value={lawyer2} onChange={(event) => { setLawyer2(event.target.value) }}/>
-            <Input size="lg" label="Plaintiff" value={client1} onChange={(event) => { setClient1(event.target.value) }}/>
-            <Input size="lg" label="Plea" value={client2} onChange={(event) => { setClient2(event.target.value) }}/>
-            <Input size="lg" label="Verdict" value={verdict} onChange={(event) => { setVerdict(event.target.value) }}/>
-            <Button className="mt-6">
-                 upload evidence
-            </Button>
+            <Input size="lg" placeholder="Case No." value={caseNo} className="bg-gray-200 p-3" onChange={(event) => { setCaseNo(event.target.value) }}/>
+            <Input size="lg" placeholder="Case Name" value={caseName} className="bg-gray-200 p-3" onChange={(event) => { setCaseName(event.target.value) }}/>
+            <Input size="lg" placeholder="Judge" value={judge} className="bg-gray-200 p-3" onChange={(event) => { setJudge(event.target.value) }}/>
+            <Input size="lg" placeholder="Prosecutor lawyer name" className="bg-gray-200 p-3" value={lawyer1} onChange={(event) => { setLawyer1(event.target.value) }}/>
+            <Input size="lg" placeholder="Defender lawyer name" className="bg-gray-200 p-3" value={lawyer2} onChange={(event) => { setLawyer2(event.target.value) }}/>
+            <Input size="lg" placeholder="Plaintiff" value={client1} className="bg-gray-200 p-3" onChange={(event) => { setClient1(event.target.value) }}/>
+            <Input size="lg" placeholder="Plea" value={client2}  className="bg-gray-200 p-3" onChange={(event) => { setClient2(event.target.value) }}/>
+            <Input size="lg" placeholder="Verdict" value={verdict} className="bg-gray-200 p-3" onChange={(event) => { setVerdict(event.target.value) }}/>
+  
           </div>
 
 
@@ -47,6 +46,7 @@ const address = "0x3d64226A740EC43B25a53596DA02208fc4214a7c";
 
         </form>
       </Card>
+      <div className="flex items-center justify-center">
       <Web3Button
           contractAddress = {address}
           action={(contract) =>{
@@ -58,6 +58,8 @@ const address = "0x3d64226A740EC43B25a53596DA02208fc4214a7c";
         >
           Submit
         </Web3Button>
+        </div>
+      </div>
       </div>
     );
   }

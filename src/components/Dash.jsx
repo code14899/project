@@ -6,13 +6,14 @@ import imgSrc4 from "../assets/4.png"
 import {NavLink} from 'react-router-dom'
 const Dash = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center'>
+    <div className='grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center'>
 
-        <div className='max-w-3xl px-10 py-10 col-span-1.5 '>
+        <div className='px-16 py-10 col-span-1.5 '>
           <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ministry_of_Law_and_Justice.svg/2560px-Ministry_of_Law_and_Justice.svg.png"
               />
         </div>
+
         <div className='pl-20'>
         <div className='grid grid-rows-4 grid-flow-col gap-4 px-10 py-8 max-w-xs'>
         <NavLink
@@ -39,7 +40,7 @@ const Dash = () => {
           </NavLink>
           <NavLink
                 exact
-                to="/lawyer"
+                to="/guest"
                 > 
           <button>
             <img
@@ -50,7 +51,7 @@ const Dash = () => {
           </NavLink>
           <NavLink
                 exact
-                to="/lawyer"
+                to="/jury"
                 > 
           <button>
             <img
